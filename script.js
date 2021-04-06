@@ -218,7 +218,7 @@ document.addEventListener('keyup', (event) => {
     calculator.onKeyUp(event);
     });
 
-    // W.I.P -----------------------------------------------------------
+    // W.I.P ----------------------------------------------------------
     /*paste.addEventListener('click', () => { 
         let pastenum = navigator.clipboard.readText().toString();
        calculator.appendNumber(pastenum);
