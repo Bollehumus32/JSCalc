@@ -1,0 +1,146 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Champagne & Limousines', sans-serif;
+    font-weight: bold;
+}
+
+body {
+    padding:0;
+    margin:0;
+    background: #00aaff
+}
+
+.calculator-grid {
+    position: absolute;
+    left: 37vw;
+    top: 8vh;
+    display:grid;
+    justify-content: center;
+    align-content: center;
+    max-height: 100vh;
+    grid-template-columns: repeat(4, 125px);
+    grid-template-rows: minmax(120px,auto) repeat(6, 125px);
+}
+
+.calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background: rgb(18, 69, 136);
+    color: white;
+}
+
+.calculator-grid > button:hover {
+    background: rgba(18, 69, 136, 0.5);
+}
+
+.calculator-grid >button:active {
+    background: cornflowerblue;
+}
+
+.span-two {
+    grid-column: span 2;
+    text-decoration: underline;
+}
+
+.span-four {
+    grid-column: span 4;
+    text-decoration: underline;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(50,50,50, .75);
+    border: 2px groove rgb(0, 0, 0);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous-operand {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+}
+
+.output .current-operand {
+    color: rgba(255, 255, 255, 1);
+    font-size: 2rem;
+}
+
+.header {
+    cursor: default;
+    box-sizing: border-box;
+    text-decoration: underline;
+
+    margin:0;
+    padding: 10px;
+    justify-content:center;
+    align-items: center;
+    position: absolute;
+    right: 875px;
+    top: 5px;
+
+    grid-column: 1 / 4;
+    background-color: rgba(50, 50, 50, 0.185);
+    border: 2px groove rgb(0, 0, 0);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    color:rgba(255, 255, 255, .5)
+}
+
+.header:hover {
+    color: rgba(0,170,255,.75);
+    text-decoration: underline;
+}
+
+.inc {
+    cursor: pointer;
+    position: absolute;
+    bottom: 0vh;
+    right: 0px;
+    padding: 10px;
+
+    grid-column: 1 / 4;
+    background-color: rgba(50, 50, 50, 0.185);
+    border: 2px groove rgb(0, 0, 0);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    color:rgba(255, 255, 255, .5)
+}
+
+.inc:hover {
+    color: rgba(7, 98, 143, 0.75);
+}
+
+.operation {
+    background: orange;
+}
+
+
+.text {
+    border-radius: 0 1% 1% 0;
+    background:rgba(7, 98, 143, 0.75);
+    font-size: 20px;
+    color: white;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.span-two-equal {
+    grid-column: span 2;
+}
+
+.pastebtn {
+    grid-column: 1/-1;
+}
