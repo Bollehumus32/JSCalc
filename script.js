@@ -29,7 +29,7 @@ class Calculator {
             }
         
             // Backspace to reset value and display value
-            if(keyName == 'Backspace') {
+            if(keyName == 'Backspace' || keyName == 'Escape') {
                 this.clear();
                 this.updateDisplay();
             }
