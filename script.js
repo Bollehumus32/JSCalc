@@ -6,10 +6,16 @@ class Calculator {
         this.keyPressedOperatorsAllowed = keyPressedOperatorsAllowed;
         this.clear()
     }
+
     // on key up
     onKeyUp(event) {
         let keyName = event.key;
-        
+        if(textArea === document.activeElement) {
+
+        }
+
+        else {
+
             // Numbers 0-9
             if(keyPressedNumbersAllowed.includes(keyName)) {
                 this.appendNumber (keyName);
@@ -38,6 +44,7 @@ class Calculator {
                 this.compute();
                 this.updateDisplay();
             }
+        }
 
     };
 // ------------------------------------------------------------------------ //
@@ -180,6 +187,7 @@ const copy = document.querySelector('[data-copy]');
 const keyPressedNumbersAllowed = ['0','1','2','3','4','5','6','7','8','9'];
 const keyPressedOperatorsAllowed = ['/', '*', '-', '+'];
 const paste = document.querySelector('[data-paste]');
+const textArea = document.querySelector('[data-textArea]');
 
 const calculator = new Calculator(prevOperandTextElement, currentOperandTextElement)
 
