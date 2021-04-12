@@ -18,8 +18,7 @@ class Calculator {
        
             // Operators /, *, -, +, =
             if(keyPressedOperatorsAllowed.includes(keyName)) {
-                keyName == 'Enter' ? keyName = '=' : keyName = keyName;
-                this.chooseOperator(keyName);
+                this.chooseOperation(keyName);
                 this.updateDisplay();
             }
         
@@ -32,6 +31,11 @@ class Calculator {
             // Dot 
             if(keyName == ',' || keyName == '.') {
                 this.appendNumber(keyName);
+                this.updateDisplay();
+            }
+
+            if(keyName == 'Enter' || keyName =='=') {
+                this.compute();
                 this.updateDisplay();
             }
 
@@ -174,7 +178,7 @@ const prevOperandTextElement = document.querySelector('[data-previous-operand]')
 const currentOperandTextElement = document.querySelector('[data-current-operand]');
 const copy = document.querySelector('[data-copy]');
 const keyPressedNumbersAllowed = ['0','1','2','3','4','5','6','7','8','9'];
-const keyPressedOperatorsAllowed = ['/', '*', '-', '+', 'Enter'];
+const keyPressedOperatorsAllowed = ['/', '*', '-', '+'];
 const paste = document.querySelector('[data-paste]');
 
 const calculator = new Calculator(prevOperandTextElement, currentOperandTextElement)
